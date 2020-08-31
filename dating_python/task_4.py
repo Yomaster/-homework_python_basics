@@ -32,3 +32,15 @@ while True:
         length_str += 1
     count_mega = user_number
 print(max_number)
+
+# Новое решение
+
+user_number = input('Введите число: ')
+max_n = 9
+while True:
+    max_n = str(max_n)
+    if max_n in list(user_number):
+        break
+    max_n = int(max_n)
+    max_n -= 1
+print(max_n)
