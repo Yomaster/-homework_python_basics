@@ -5,7 +5,7 @@ def my_func(positional_only1, positional_only2, positional_only3, /):
     """
     arguments = [positional_only1, positional_only2, positional_only3]
     arguments.sort()
-    two_max_arguments = arguments[1:]
+    two_max_arguments = arguments[-2:]
     return two_max_arguments[0] + two_max_arguments[1]
 
 

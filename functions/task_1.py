@@ -7,7 +7,7 @@ def division(dividend, divisor):
     try:
         return dividend / divisor
     except ZeroDivisionError:
-        return 'Деление на ноль запрещенно'
+        return 'Деление на ноль запрещено'
 
 
 user_numbers = int(input('Введите делимое: ')), int(input('Введите делитель: '))

@@ -10,19 +10,15 @@ def sum_numbers():
     выводит сумму и завершает работу. Если не было - завершает
     работу, не выводя больше никаких значений.
     """
-    global sum_n
-    stop = None
-    while stop is None:
+    result = 0
+    while True:
         user_data = input('Введите целые числа через пробел, либо знак ! для остановки: ')
-        if user_data == '!':
-            break
         for number in user_data.split(' '):
             if number == '!':
-                stop = 1
-                break
-            sum_n = sum_n + int(number)
-        print(sum_n)
+                return result
+            result += int(number)
+        print(result)
 
 
-sum_n = 0
-sum_numbers()
+sum_n = sum_numbers()
+print(sum_n)
