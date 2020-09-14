@@ -3,8 +3,6 @@ with open('task_3.txt', 'r', encoding='utf-8') as f:
     low_income = []
     for line in f:
         surname, salary = line.split(' ')
-        if salary.find('\n') != -1:
-            salary = salary[0:salary.find('\n')]
         if int(salary) < 20000:
             low_income.append(surname)
         list_salaries.append(int(salary))
