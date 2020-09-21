@@ -68,7 +68,7 @@ class Matrix:
         return '\n'.join(matrix_final_str)
 
     def __add__(self, other):
-        """Перегружает оператор '+' для сложения матриц, делая соответствующую проверку"""
+        """Перегружает оператор '+' для сложения матриц, делая соответствующую проверку."""
         if len(self.list1) != len(other.list1) or len(self.list1[0]) != len(other.list1[0]):
             raise ValueError('матрицы должны иметь одинаковый размер')
         matrix_sum = []
