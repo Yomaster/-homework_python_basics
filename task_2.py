@@ -18,6 +18,12 @@ class Closes(ABC):
         """
         Closes.total_expense = Closes.total_expense + round(self.tissue_consumption, 2)
 
+    @staticmethod
+    def validate_value(value):
+        if value < 0:
+            raise ValueError("необходимо ввести положительное число.")
+
+    @property
     @abstractmethod
     def tissue_consumption(self):
         """Абстрактный метод, который будет реализован
@@ -32,8 +38,7 @@ class Closes(ABC):
 class Coat(Closes):
     """Класс пальто."""
     def __init__(self, v):
-        if not isinstance(v, int) and not isinstance(v, float) or v < 0:
-            raise TypeError('необходимо ввести положительное число.')
+        self.validate_value(v)
         self.v = v
         super().__init__()
 
@@ -45,8 +50,7 @@ class Coat(Closes):
 class Costume(Closes):
     """Класс костюм."""
     def __init__(self, h):
-        if not isinstance(h, int) and not isinstance(h, float) or h < 0:
-            raise TypeError('необходимо ввести положительное число.')
+        self.validate_value(h)
         self.h = h
         super().__init__()
 
