@@ -33,10 +33,12 @@ def creating_list_numbers():
                     if str(valid_elements) == user_number[i]:
                         not_error_count += 1
                         break
-                    if user_number[0] == '-' and len(user_number) > 1 and list(user_number).count('-') == 1:
+                    if user_number[0] == '-' and len(user_number) > 1 and list(user_number).count('-') == 1 and \
+                            str(valid_elements) == user_number[i]:
                         not_error_count += 1
                         break
-                    if user_number[i] == '.' and len(user_number) > 1 and list(user_number).count('.') == 1:
+                    if user_number[i] == '.' and len(user_number) > 1 and list(user_number).count('.') == 1 and \
+                            str(valid_elements) == user_number[i]:
                         not_error_count += 1
                         break
             if not_error_count != len(user_number):
